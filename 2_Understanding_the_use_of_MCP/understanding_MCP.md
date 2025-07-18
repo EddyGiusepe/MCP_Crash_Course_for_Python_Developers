@@ -11,6 +11,9 @@ Este estudo foi baseado no tutorial de [Dave Ebbelaar]()
 
 O Protocolo de Contexto do Modelo segue uma arquitetura `cliente-host-servidor`: essa separação de preocupações permite sistemas modulares e combináveis, onde cada servidor pode se concentrar em um domínio específico (como acesso a arquivos, pesquisa na web ou operações de banco de dados).
 
+`Clientes MCP`: clientes de protocolo que mantêm conexões 1:1 com servidores
+
+`Hosts MCP`: programas como Claude Desktop, IDEs ou seu aplicativo Python que desejam acessar dados por meio do MCP
 * `Hosts MCP`: programas como Claude Desktop, IDEs ou seu aplicativo Python que desejam acessar dados por meio do MCP
 
 * `Clientes MCP`: clientes de protocolo que mantêm conexões 1:1 com servidores
@@ -24,22 +27,23 @@ O Protocolo de Contexto do Modelo segue uma arquitetura `cliente-host-servidor`:
 Essa separação de preocupações permite sistemas modulares e combináveis, onde cada servidor pode se concentrar em um domínio específico (como acesso a arquivos, pesquisa na web ou operações de banco de dados).
 
 
-![](mcp_1.jpeg)
+![](./print_mcp_1.png)
 
 
+O MCP define três primitivas principais que os servidores podem implementar:
 
-O `MCP` define três primitivas principais que os servidores podem implementar:
+``1.`` [Ferramentas - Tools](https://modelcontextprotocol.io/docs/concepts/tools#python): Funções controladas por modelo que os ``LLMs`` podem invocar (como chamadas de API, cálculos, etc.)
 
-`1.` [Tools](https://modelcontextprotocol.io/docs/concepts/tools#python): funções controladas por modelo que os `LLMs` podem invocar (como chamadas de API, cálculos, etc.)
+``2.`` [Recursos - Resources](https://modelcontextprotocol.io/docs/concepts/resources#python): Dados controlados pelo aplicativo que fornecem contexto (como conteúdo de arquivo, registros de banco de dados, etc.)
 
-`2.` [Recursos](https://modelcontextprotocol.io/docs/concepts/resources#python): dados controlados pelo aplicativo que fornecem contexto (como conteúdo de arquivo, registros de banco de dados, etc.)
+``3.`` [Prompts](https://modelcontextprotocol.io/docs/concepts/prompts#python): Templates controlados pelo usuário para interações ``LLM``
 
-`3.` [Prompts](https://modelcontextprotocol.io/docs/concepts/prompts#python): Templates controlados pelo usuário para interações `LLM`
+Para ``desenvolvedores Python``, o primitivo mais imediatamente útil são as ferramentas, que permitem que os ``LLMs`` executem ações programaticamente.
 
-Para desenvolvedores `Python`, o primitivo mais imediatamente útil são as ferramentas (`tools`), que permitem que os `LLMs` executem ações programaticamente.
 
-Mecanismos de Transporte em Mergulho Profundo
-O MCP suporta dois mecanismos principais de transporte:
+### <font color="blue">Mecanismos de Transporte um Mergulho Profundo</font>
+
+O MCP suporta três mecanismos principais de transporte:
 
 Stdio (E/S padrão) :
 

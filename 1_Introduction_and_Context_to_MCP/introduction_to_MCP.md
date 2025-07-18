@@ -25,7 +25,7 @@ Há uma distinção clara entre:
 
 A maioria dos tutoriais online aborda o primeiro caso, mostrando como aprimorar suas ferramentas pessoais de `IA`. Isso é valioso, mas deixa uma lacuna para desenvolvedores que criam sistemas de produção e precisam entender os aspectos técnicos mais profundos do trabalho com `MCP` em seus aplicativos `Python`.
 
-Neste curso intensivo, estamos focando especificamente em `desenvolvedores Python` que desejam:
+Neste curso intensivo, de ``Dave Ebbelaar``, estamos focando especificamente em `desenvolvedores Python` que desejam:
 
 - Entender a arquitetura técnica do MCP
 
