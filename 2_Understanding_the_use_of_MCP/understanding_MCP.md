@@ -69,34 +69,29 @@ Entender quando usar cada transporte (`transport`) é crucial para criar impleme
 * Use `Streamable HTTP` para implantações de produção onde você precisa do melhor desempenho e escalabilidade.
 
 
+### `Comparação de Mecanismos de Transporte`
 
 
+![](./comparando_mecanismos_TRANSPORT.jpeg)
 
 
+Se você conhece o `FastAPI`, verá que implementar um servidor `MCP` com transportes HTTP (`SSE` e `Streamable HTTP`) é muito semelhante. Ambas as estruturas usam endpoints `HTTP` para receber solicitações e oferecer suporte a respostas em streaming. Ambas permitem definir manipuladores (`handlers`) para `routes/endpoints` específicos e fornecem padrões `async/await` para lidar com solicitações e gerar respostas. Essa similaridade facilita a transição dos desenvolvedores do `FastAPI` para a construção de servidores `MCP`, pois eles podem aproveitar seus conhecimentos existentes em `HTTP`, programação assíncrona e respostas em streaming.
 
 
+### <font color="blue">Um novo padrão</font>
+
+O verdadeiro poder do `MCP` não está na introdução de novas capacidades, mas na padronização de como essas capacidades são expostas e consumidas. Isso oferece várias vantagens importantes:
+
+* `Reutilização` (Reusability): cria um servidor uma vez e usa-lo com qualquer cliente compatível com `MCP`.
+
+* `Composibilidade` (Composability): combina vários servidores para criar recursos complexos.
+
+* `Crescimento do ecossistema` (Ecosystem Growth): beneficiar-se de servidores criados por outros.
 
 
+O ecossistema `MCP` já está crescendo rapidamente, com servidores disponíveis e diversas ferramentas. Você pode encontrar uma visão geral aqui: [Servidores oficialmente suportados](https://github.com/modelcontextprotocol/servers).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Isso significa que você pode aproveitar os servidores existentes em vez de reinventar a roda e contribuir com seus próprios servidores para beneficiar a comunidade.
 
 
 Thank God!
