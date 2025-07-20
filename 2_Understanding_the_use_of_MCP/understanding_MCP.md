@@ -11,12 +11,10 @@ Este estudo foi baseado no tutorial de [Dave Ebbelaar]()
 
 O Protocolo de Contexto do Modelo segue uma arquitetura `cliente-host-servidor`: essa separação de preocupações permite sistemas modulares e combináveis, onde cada servidor pode se concentrar em um domínio específico (como acesso a arquivos, pesquisa na web ou operações de banco de dados).
 
-`Clientes MCP`: clientes de protocolo que mantêm conexões 1:1 com servidores
-
-`Hosts MCP`: programas como Claude Desktop, IDEs ou seu aplicativo Python que desejam acessar dados por meio do MCP
-* `Hosts MCP`: programas como Claude Desktop, IDEs ou seu aplicativo Python que desejam acessar dados por meio do MCP
 
 * `Clientes MCP`: clientes de protocolo que mantêm conexões 1:1 com servidores
+
+* `Hosts MCP`: programas como Claude Desktop, IDEs ou seu aplicativo Python que desejam acessar dados por meio do MCP
 
 * `Servidores MCP`: programas leves que expõem recursos específicos por meio do `Protocolo de Contexto do Modelo` padronizado (Tools, recursos, prompts)
 
@@ -45,21 +43,30 @@ Para ``desenvolvedores Python``, o primitivo mais imediatamente útil são as fe
 
 O MCP suporta três mecanismos principais de transporte:
 
-Stdio (E/S padrão) :
+`1.` `Stdio - Entrada/Saída Padrão` (Standard IO):
 
-A comunicação ocorre por meio de fluxos de entrada/saída padrão
-Melhor para integrações locais quando o servidor e o cliente estão na mesma máquina
-Configuração simples sem necessidade de configuração de rede
-SSE (Eventos enviados pelo servidor) :
+* A comunicação ocorre por meio de fluxos de entrada/saída padrão.
+* Melhor para integrações locais quando o servidor e o cliente estão na mesma máquina.
+* Configuração simples sem necessidade de configuração de rede.
 
-Usa HTTP para comunicação cliente-servidor e SSE para comunicação servidor-cliente
-Adequado para conexões remotas entre redes
-Permite arquiteturas distribuídas
-Entender quando usar cada transporte é crucial para criar implementações eficazes de MCP:
+`2.` `SSE - Server-Sent Events` (Eventos enviados pelo servidor):
 
-Use Stdio ao criar integrações de aplicativos individuais ou durante o desenvolvimento
-Use o SSE quando precisar de acessibilidade remota ou estiver integrando com clientes que exigem isso
-Comparação de Mecanismos de Transporte
+* Usa HTTP para comunicação `cliente-servidor` e SSE para comunicação `servidor-cliente`.
+* Adequado para conexões remotas entre redes.
+* Permite arquiteturas distribuídas.
+
+`3.` `Streamable HTTP` (introduzido em 24 de março de 2025) :
+
+* Transporte de streaming moderno baseado em HTTP que substitui o `SSE`.
+* Usa um ponto de extremidade (`endpoint`) unificado para comunicação bidirecional.
+* `Recomendado para implantações de produção devido ao melhor desempenho e escalabilidade`.
+* Suporta modos de operação com e sem estado.
+
+Entender quando usar cada transporte (`transport`) é crucial para criar implementações eficazes de `MCP`:
+
+* Use `Stdio` ao criar integrações de aplicativos individuais ou durante o desenvolvimento.
+* Use o `SSE`  para desenvolvimento ou quando trabalhar com implementações `MCP` mais antigas.
+* Use `Streamable HTTP` para implantações de produção onde você precisa do melhor desempenho e escalabilidade.
 
 
 
