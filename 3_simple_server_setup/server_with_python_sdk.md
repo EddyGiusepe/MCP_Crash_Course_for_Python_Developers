@@ -12,7 +12,7 @@ Este estudo foi baseado no tutorial de [Dave Ebbelaar]()
 
 
 
-
+![](./running_only_server_DEV.png)
 
 
 
