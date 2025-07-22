@@ -4,11 +4,16 @@ Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
 Script server.py
 ================
+Este script é um servidor MCP (Model Context Protocol) que implementa 
+uma ferramenta simples de calculadora.
 
 Run
 ---
 * Executando só o server.py ---> mcp dev server.py
 
+ou
+
+* uv run server.py
 """
 from mcp.server.fastmcp import FastMCP
 
