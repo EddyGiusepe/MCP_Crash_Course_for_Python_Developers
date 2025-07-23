@@ -4,7 +4,7 @@ Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
 Script server.py
 ================
-Este script é um servidor MCP (Model Context Protocol) que implementa 
+Este script é um servidor MCP (Model Context Protocol) que implementa
 uma ferramenta simples de calculadora.
 
 Run
@@ -14,6 +14,11 @@ Run
 ou
 
 * uv run server.py
+
+NOTA:
+Não esqueça de deixar rodando este script, pois ele é o servidor MCP.
+Ao executar este script você terá a seguinte endpoint:
+http://localhost:8050/
 """
 from mcp.server.fastmcp import FastMCP
 
@@ -37,7 +42,7 @@ def add(a: int, b: int) -> int:
 # Executa o servidor:
 if __name__ == "__main__":
     transport = "sse"
-    #transport = "stdio"
+    # transport = "stdio"
     if transport == "stdio":
         print("Executando servidor com transporte stdio")
         mcp.run(transport="stdio")
@@ -49,4 +54,3 @@ if __name__ == "__main__":
         mcp.run(transport="streamable-http")
     else:
         raise ValueError(f"Transporte desconhecido: {transport}")
-    
