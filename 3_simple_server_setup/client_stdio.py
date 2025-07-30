@@ -4,7 +4,7 @@ Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
 
 Script client_stdio.py
 ======================
-Este script é o cliente MCP que se conecta ao servidor 
+Este script é o cliente MCP que se conecta ao servidor
 MCP usando o transporte stdio.
 
 Run
