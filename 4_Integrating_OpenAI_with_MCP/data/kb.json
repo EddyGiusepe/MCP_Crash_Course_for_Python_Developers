@@ -1,0 +1,22 @@
+[
+    {
+      "question": "Qual é a política de férias da empresa?",
+      "answer": "Funcionários em tempo integral têm direito a 20 dias de férias pagas por ano. As férias podem ser tiradas após completar 6 meses de emprego. Dias de férias não utilizados podem ser transferidos para o ano seguinte até um máximo de 5 dias. As solicitações de férias devem ser enviadas pelo menos 2 semanas antes através do portal de RH."
+    },
+    {
+      "question": "Como solicitar uma nova licença de software?",
+      "answer": "Para solicitar uma nova licença de software, por favor, envie um ticket através do portal do Serviço de TI. Inclua o nome do software, versão e justificativa comercial. As licenças de software padrão geralmente são aprovadas dentro de 2 dias úteis. Para software especializado, a aprovação pode levar até 5 dias úteis e pode exigir aprovação do chefe do departamento."
+    },
+    {
+      "question": "Qual é a política de trabalho remoto da empresa?",
+      "answer": "A empresa segue um modelo de trabalho híbrido. Os funcionários podem trabalhar remotamente até 3 dias por semana. Os dias de trabalho remoto devem ser coordenados com sua equipe e aprovados pelo seu gerente direto. Todo trabalho remoto requer uma conexão de internet estável e um espaço de trabalho dedicado. As horas de colaboração são das 10:00 às 15:00 (horário de verão do leste)."
+    },
+    {
+      "question": "Como submeter um relatório de despesas?",
+      "answer": "Os relatórios de despesas devem ser enviados através do sistema de gerenciamento de despesas da empresa. Inclua todas as notas fiscais, categorize as despesas adequadamente e adicione uma breve descrição para cada entrada. Os relatórios devem ser enviados dentro de 30 dias após a despesa. Para despesas acima de $100, pode ser necessária uma documentação adicional. Todos os relatórios requerem aprovação do gerente."
+    },
+    {
+      "question": "Qual é o processo de relatório de incidentes de segurança?",
+      "answer": "Se você descobrir um incidente de segurança, entre em contato imediatamente com o time de segurança em security@company.com ou ligue para a linha de atendimento de segurança 24/7. Não tente investigar ou resolver o incidente você mesmo. Documente o que você observou, incluindo marcas de tempo e sistemas afetados. O time de segurança irá guiá-lo pelo processo de resposta ao incidente e pode precisar de sua ajuda para investigação."
+    }
+  ]
