@@ -39,8 +39,29 @@ async def main():
                 print(f"  - {tool.name}: {tool.description}")
 
             # Chama a ferramenta calculadora:
-            result = await session.call_tool("add", arguments={"a": 2, "b": 3})
-            print(f"2 + 3 = {result.content[0].text}")
+            # result = await session.call_tool("add", arguments={"a": 2, "b": 3})
+            # print(f"2 + 3 = {result.content[0].text}")
+
+            # Criamos nosso loop para realizar cálculos:
+            while True:
+                print("\n--- Calculadora Interativa com MCP ---")
+                try:
+                    a = int(input("Digite o primeiro número: "))
+                    b = int(input("Digite o segundo número: "))
+
+                    # Chama a ferramenta calculadora com os valores fornecidos pelo usuário:
+                    result = await session.call_tool("add", arguments={"a": a, "b": b})
+                    print(f"{a} + {b} = {result.content[0].text}")
+
+                    # Perguntar se o usuário deseja continuar:
+                    continuar = input("Deseja fazer outro cálculo? (s/n): ").lower()
+                    if continuar != "s":
+                        print("Encerrando a calculadora. Até logo!")
+                        break
+                except ValueError:
+                    print("Erro: Por favor, digite apenas números inteiros.")
+                except Exception as e:
+                    print(f"Erro ao realizar o cálculo: {e}")
 
 
 if __name__ == "__main__":
