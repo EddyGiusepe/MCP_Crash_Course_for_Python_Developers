@@ -73,6 +73,7 @@ uv run server.py
 Quando você executa um servidor MCP:
 
 ``1.`` O servidor é inicializado com as capacidades que você definiu (ferramentas, recursos, etc.)
+
 ``2.`` Ele começa a escutar conexões em um transporte específico
 
 Por padrão, os servidores MCP não usam uma porta de servidor web tradicional. Em vez disso, eles usam:
