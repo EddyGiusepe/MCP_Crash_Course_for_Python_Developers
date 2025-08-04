@@ -41,8 +41,9 @@ def add(a: int, b: int) -> int:
 
 # Executa o servidor:
 if __name__ == "__main__":
-    transport = "sse"
+    # transport = "sse"
     # transport = "stdio"
+    transport = "streamable-http"
     if transport == "stdio":
         print("Executando servidor com transporte stdio")
         mcp.run(transport="stdio")
