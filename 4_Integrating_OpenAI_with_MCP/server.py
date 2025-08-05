@@ -22,7 +22,7 @@ def get_knowledge_base() -> str:
         Uma string formatada contendo todos os pares de Q&A da base de conhecimento.
     """
     try:
-        kb_path = os.path.join(os.path.dirname(__file__), "data", "kb.json")
+        kb_path = os.path.join(os.path.dirname(__file__), "data", "dataset_western_union.json") # "kb.json"  ou  "dataset_western_union.json"
         with open(kb_path, "r") as f:
             kb_data = json.load(f)
 
