@@ -1,6 +1,12 @@
 #! /usr/bin/env python3
 """
 Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+
+Run
+===
+Só executar o seguinte comando que ele vai executar o servidor e o cliente ao mesmo tempo:
+
+uv run client_simple.py
 """
 import asyncio
 import json
