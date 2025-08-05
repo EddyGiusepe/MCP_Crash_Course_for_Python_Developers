@@ -7,7 +7,7 @@ Este estudo foi baseado no tutorial de [Dave Ebbelaar]()
 
 ## <font color="red">Integração OpenAI com MCP</font>
 
-Esta seção demonstra como integrar o ``Model Context Protocol (MCP)`` com a API do ``OpenAI`` para criar um sistema onde o ``OpenAI`` pode acessar e usar ferramentas fornecidas pelo seu ``servidor MCP``.
+Esta seção demonstra como integrar o ``Model Context Protocol (MCP)`` com a API do ``OpenAI`` para criar um sistema onde a ``OpenAI`` pode acessar e usar ferramentas fornecidas pelo seu ``servidor MCP``.
 
 ### <font color="blue">Visão geral</font>
 
